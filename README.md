@@ -15,4 +15,14 @@ automaticamente assim que a aplicação 2 for iniciada e estiver preparada.
 
 ![image](https://github.com/user-attachments/assets/861ba27a-5e8a-4cbc-8f14-5c62533e2e05)
 
+Comando para build docker catch_data:
+docker build -t catch_data_app .
+Comando para rodar:
+docker run -d --name catch_data_container -p 3000:3000 --env-file .env catch_data_app
+
+Comando para build docker save_data:
+docker build -t save_data_app .
+Comando para rodar:
+docker run -d --name save_data_container -p 4000:4000 --env-file .env save_data_app
+
 read.me interno do projeto com mais detalhes.
