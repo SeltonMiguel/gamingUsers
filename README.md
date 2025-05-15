@@ -3,9 +3,9 @@ Tutorial: Ao clonar e preparar o ambiente rode o comando | npm run start:dev | n
 Aplicações estruturadas com padrão DDD e e SOLID visando organização e flexibilidade com os seguinte objetivos:
 
 Aplicação 1 ( catch_data ):
-Realizar a leitura e manusear os dados dos arquivos csv.
+Realizar a leitura e manusear os dados dos arquivos csv em batches de 1000 registros por segundo.
 Aplicação 2 ( save_data ):
-Receber os dados tratados na aplicação 1 e inserir no banco de dados. 
+Receber os dados tratados na aplicação 1 e inserir no banco de dados, separando a quantidade de pessoas registradas por estado. 
 
 Fluxo:
 Ao iniciar a aplicação Save Data ( aplicação 2 ) será iniciado o servidor e a api estará apta a receber via http axios os dados da Catch Data ( aplicação 1 ) a qual será executada 
