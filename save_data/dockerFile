@@ -1,0 +1,25 @@
+# Dockerfile - save_data
+
+FROM node:22-alpine
+
+# Define diretório de trabalho
+WORKDIR /app
+
+# Copia os arquivos
+COPY package*.json ./
+COPY tsconfig*.json ./
+COPY . .
+
+# Instala apenas dependências de produção
+RUN npm install --production
+
+# Compila o TypeScript
+RUN npm run build
+
+# Expõe a porta usada no .env
+EXPOSE 4000
+
+ENV PORT=4000
+
+# Comando para iniciar
+CMD ["node", "dist/main"]
