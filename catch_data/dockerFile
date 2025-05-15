@@ -1,0 +1,26 @@
+# Dockerfile - catch_data
+
+FROM node:22-alpine
+
+# Define diretório de trabalho
+WORKDIR /app
+
+# Copia os arquivos
+COPY package*.json ./
+COPY tsconfig*.json ./
+COPY . .
+
+# Instala as dependências
+RUN npm install --production
+
+# Compila o projeto
+RUN npm run build
+
+# Expõe a porta (ajuste se necessário)
+EXPOSE 3000
+
+# Define variáveis ambiente padrões (pode ser sobrescrito com .env ou -e)
+ENV PORT=3000
+
+# Comando para iniciar
+CMD ["node", "dist/main"]
