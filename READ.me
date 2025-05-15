@@ -1,0 +1,117 @@
+# Aplicação Catch Data
+
+> Sistema para leitura, processamento e envio de dados em batchs via API HTTP  
+> Construído com NestJS, TypeScript, Axios e MongoDB
+
+---
+
+## Sumário
+
+- Tecnologias  
+- Estrutura do projeto  
+- Pré-requisitos  
+- Configuração do ambiente  
+- Instalação  
+- Como rodar o projeto  
+- Testes  
+- Como funciona  
+- Possíveis erros e soluções
+
+---
+
+## Tecnologias
+
+- Node.js 22.x  
+- NestJS 
+- TypeScript  
+- Axios
+- MongoDB
+- Jest 
+
+---
+
+## Estrutura do projeto
+
+src/  
+ ├── csv-reader/            # Leitura e parse de arquivos CSV  
+ ├── data/                  # Arquivos CSV estáticos  
+ ├── data-sender/           # Serviço para envio via API HTTP  
+ ├── providers/             # Providers NestJS (ex: Axios)  
+ ├── app.controller.ts      # Controller principal  
+ ├── app.module.ts          # Módulo principal  
+ ├── main.ts                # Entry point NestJS  
+test/                      # Testes automatizados  
+dist/                      # Código transpilado para produção  
+.env.example               # Exemplo variáveis ambiente  
+
+---
+
+## Pré-requisitos
+
+- Node.js >= 22.x  
+- MongoDB
+- Git  
+- (Opcional) Docker  
+
+---
+
+## Configuração do ambiente
+
+1. Copie `.env.example` para `.env`  
+2. Configure variáveis, ex:
+
+# Aplicação Save Data
+
+> Aplicação NestJS para salvar dados processados via API e persistência em banco
+
+## Sumário
+
+- Tecnologias  
+- Estrutura do projeto  
+- Pré-requisitos  
+- Configuração do ambiente  
+- Instalação  
+- Como rodar o projeto  
+- Testes  
+- Como funciona  
+- Possíveis erros e soluções
+
+## Tecnologias
+
+- Node.js 22.x  
+- NestJS 
+- TypeScript  
+- Axios
+- MongoDB
+- Jest 
+
+## Estrutura do projeto
+
+src/
+├── services/ # Serviços para salvar dados
+├── controllers/ # Controllers REST
+├── entities/ # Entidades/modelos de dados
+├── repositories/ # Repositórios para acesso a dados
+├── app.module.ts # Módulo principal
+├── main.ts # Entry point
+test/ # Testes
+dist/ # Código compilado
+.env.example # Exemplo .env
+
+
+## Pré requisitos
+
+- Node.js >= 22.x  
+- MongoDB instalado e rodando  
+- Git  
+
+## Configuração do ambiente
+
+copie .env.exampe para .env
+
+PORT=4000
+MONGODB_URI=mongodb://localhost:27017/save_data_db
+
+## Como rodar
+
+npm run start:dev
